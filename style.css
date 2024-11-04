@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* inline-block css */
+.inline-block-example {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin: 10px;
+    background-color: lightblue;
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: top;
+}
+
+/* box css */
+.box {
+    width: 200px;
+    height: 100px;
+    border: 2px solid black;
+    padding: 10px;
+    overflow: auto;
+}
+
+/* position  css*/
+.parent {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    margin: 20px;
+}
+
+.static {
+    position: static;
+    background-color: lightblue;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.relative {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background-color: lightgreen;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.absolute {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background-color: lightcoral;
+    padding: 10px;
+}
+
+.fixed {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: lightpink;
+    padding: 10px;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    background-color: lightyellow;
+    padding: 10px;
+}
+
+/* display css */
+/* Block Display */
+.block {
+    display: block;
+    width: 100%;
+    background-color: lightblue;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Inline Display */
+.inline {
+    display: inline;
+    background-color: lightgreen;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* Inline-Block Display */
+.inline-block {
+    display: inline-block;
+    width: 150px;
+    background-color: lightcoral;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Flex Display */
+.flex-container {
+    display: flex;
+    background-color: lightyellow;
+    padding: 10px;
+    gap: 10px;
+}
+
+.flex-item {
+    background-color: lightpink;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+/* None Display */
+.none {
+    display: none;
+}
+
+/* align content css */
+/* Flexbox Alignment */
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    /* Align items horizontally */
+    align-items: center;
+    /* Align items vertically */
+    background-color: lightgray;
+    padding: 20px;
+    height: 100px;
+}
+
+.flex-item {
+    background-color: lightblue;
+    padding: 10px;
+    border: 1px solid #333;
+}
+
+/* Text Alignment css */
+.text-container {
+    margin-top: 20px;
+}
+
+.text-container h2 {
+    text-align: center;
+    /* Center the heading */
+}
+
+.left {
+    text-align: left;
+    /* Align text to the left */
+}
+
+.center {
+    text-align: center;
+    /* Align text to the center */
+}
+
+.right {
+    text-align: right;
+    /* Align text to the right */
+}
+
+/* combinator css */
+/* 1. Descendant Combinator (space) */
+.container p {
+    color: blue;
+}
+
+/* 2. Child Combinator (>) */
+.content>p {
+    background-color: lightgreen;
+    padding: 5px;
+}
+
+/* 3. Adjacent Sibling Combinator (+) */
+p+p {
+    border: 1px solid red;
+}
+
+/* 4. General Sibling Combinator (~) */
+.highlight~span {
+    color: orange;
+}
+
+/* 5. Combining Combinators */
+.content>.nested p+.highlight {
+    font-weight: bold;
+    background-color: yellow;
+}
+
+
+/* pseudo css */
+/* 1. :hover Pseudo-Class */
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* 2. :focus Pseudo-Class */
+input:focus {
+    border-color: blue;
+    outline: none;
+}
+
+/* 3. :nth-child(n) Pseudo-Class */
+ul li:nth-child(odd) {
+    background-color: lightgray;
+}
+
+/* 4. :first-child Pseudo-Class */
+p:first-child {
+    font-weight: bold;
+}
+
+/* 5. :visited Pseudo-Class */
+a:visited {
+    color: purple;
+}
+
+/* 6. :checked Pseudo-Class */
+input[type="checkbox"]:checked {
+    background-color: yellow;
+}
+
+/* 7. :disabled Pseudo-Class */
+button:disabled {
+    background-color: lightcoral;
+    cursor: not-allowed;
+}
+
+
+
+/* pseudo-elements css */
+/* Quote container */
+.quote {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    color: #333;
+    padding: 20px;
+    margin: 50px auto;
+    width: 60%;
+    position: relative;
+    background-color: #f4f4f4;
+    border-left: 5px solid #3498db;
+}
+
+/* Decorative opening quote */
+.quote::before {
+    content: open-quote;
+    font-size: 50px;
+    color: #3498db;
+    position: absolute;
+    top: 0;
+    left: 10px;
+}
+
+/* Decorative closing quote */
+.quote::after {
+    content: close-quote;
+    font-size: 50px;
+    color: #3498db;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+/* opacity css */
+/* Container for the image and text */
+.op-text {
+    position: relative;
+    width: 300px;
+    margin: 50px auto;
+    overflow: hidden;
+    border: 2px solid #3498db;
+}
+
+/* Image styling */
+.image {
+    width: 100%;
+    transition: opacity 0.5s ease;
+    /* Smooth transition for opacity */
+}
+
+/* Text overlay styling */
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(14, 13, 13);
+    font-size: 24px;
+    text-align: center;
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.5s ease;
+    /* Smooth transition for opacity */
+}
+
+/* Hover effect */
+.op-text:hover .image {
+    opacity: 0.1;
+    /* Make the image semi-transparent */
+}
+
+.op-text:hover .text {
+    opacity: 1;
+    /* Show the text overlay */
+}
+
+
+
+
+/* flexbox css */
+.container {
+    background: pink;
+    height: 50vh;
+    width: 50vw;
+    padding: 0.5rem;
+    margin: 25vh auto 0;
+
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.item {
+    margin: 0.5rem;
+    background: lightblue;
+}
+
+
+/* Basic styles for the navigation */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    /* Needed for dropdown positioning */
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+/* Hover effect for main menu items */
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Dropdown menu styles */
+nav ul li ul {
+    display: none;
+    /* Hide dropdown by default */
+    position: absolute;
+    /* Position it below the parent */
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000;
+    /* Ensure it appears above other content */
+}
+
+nav ul li:hover ul {
+    display: block;
+    /* Show dropdown on hover */
+}
+
+nav ul li ul li {
+    display: block;
+    /* Stack dropdown items */
+    margin: 0;
+    /* Remove margin for dropdown items */
+}
+
+nav ul li ul li a {
+    padding: 10px 20px;
+    /* Add padding for dropdown items */
+}
+
+/* Hover effect for dropdown items */
+nav ul li ul li a:hover {
+    background-color: #555;
+}
+
+
+
+/* attribute selector */
+/* Style all input fields that have the 'required' attribute */
+input[required] {
+    border: 2px solid blue;
+    background-color: #f9f9ff;
+}
+
+/* Style only input fields with type="email" */
+input[type="email"] {
+    border: 2px solid green;
+    background-color: #f0fff0;
+}
+
+/* Style password fields */
+input[type="password"] {
+    border: 2px solid purple;
+    background-color: #fff0f0;
+}
+
+/* Style links that start with "https" */
+a[href^="https"] {
+    color: green;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Style links that start with "http" but are not secure */
+a[href^="http"]:not([href^="https"]) {
+    color: red;
+    text-decoration: line-through;
+}
+
+
+/* counters  */
+/* Initialize and reset counters for nested lists */
+.main-list {
+    counter-reset: main-item;
+    /* Main list counter */
+}
+
+.main-list>li {
+    counter-increment: main-item;
+}
+
+.main-list>li::before {
+    content: counter(main-item) ". ";
+    /* Main list numbering */
+}
+
+.main-list ol {
+    counter-reset: sub-item;
+    /* Sub-list counter */
+}
+
+.main-list ol>li {
+    counter-increment: sub-item;
+}
+
+.main-list ol>li::before {
+    content: counter(main-item) "." counter(sub-item) " ";
+    /* Sub-list numbering */
+}
+
